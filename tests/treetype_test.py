@@ -15,3 +15,5 @@ class TestTreeType(unittest.TestCase):
         expected = []
         actual = self.tree_type.get_locations()
         self.assertEqual(expected, actual)
+
+        
