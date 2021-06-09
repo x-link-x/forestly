@@ -10,8 +10,8 @@ class TestTreeType(unittest.TestCase):
         actual = self.tree_type.name
         self.assertEqual(expected, actual)
 
-    def test_tree_type_get_locations_returns_a_list(self):
-        expected = []
-        actual = self.tree_type.get_locations()
-        self.assertEqual(expected, actual)
+    # def test_tree_type_get_locations_returns_a_list(self):
+    #     expected = []
+    #     actual = self.tree_type.get_locations()
+    #     self.assertEqual(expected, actual)
 

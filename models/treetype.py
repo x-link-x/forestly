@@ -4,5 +4,5 @@ class TreeType:
         self.id = id
         self.locations = []
 
-    def get_locations(self):
-        return self.locations
+    # def get_locations(self):
+    #     return self.locations
