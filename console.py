@@ -6,6 +6,10 @@ from models.area import Area
 from models.treetype import TreeType
 from models.tree import Tree
 
+tree_repository.delete_all()
+area_repository.delete_all()
+treetype_repository.delete_all()
+
 oak = TreeType("Oak")
 elm = TreeType("Elm")
 ash = TreeType("Ash")
@@ -48,5 +52,5 @@ tree2 = Tree(10, ash, area0000, 2, 8)
 tree_repository.save(tree1)
 tree_repository.save(tree2)
 
-print(tree1.tree_type)
-print(tree2.area.get_grid_reference())
+# print(tree1.tree_type)
+# print(tree2.area.get_grid_reference())

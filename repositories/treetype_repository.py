@@ -14,7 +14,8 @@ def select_all():
 
 
 def delete_all():
-    pass
+    sql = "DELETE FROM tree_types"
+    run_sql(sql)
 
 def select(id):
     pass
