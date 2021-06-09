@@ -7,18 +7,18 @@
     <title>Forestly</title>
 </head>
 <body>
-
-    <nav>
-        <h1>Forestly</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <h1>Forestly</h1>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a id="my-forest-link" href="/forest">My Forest</a></li>
+            </ul>
+        </nav>
+    </header>
 
     {% block content %}
-        
     {% endblock content %}
     
 </body>
