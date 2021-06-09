@@ -16,9 +16,9 @@ CREATE TABLE areas (
 CREATE TABLE trees (
     id SERIAL PRIMARY KEY,
     approx_age INT,
-    tree_type VARCHAR(255),
+    tree_type_id INT REFERENCES tree_types(id) ON DELETE CASCADE,
     x INT,
     y INT,
-    area VARCHAR(255)
+    area_id INT REFERENCES areas(id) ON DELETE CASCADE
 );
 
