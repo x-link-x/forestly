@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-# import blueprints
+from controllers.areas_controller import areas_blueprint
 
 app = Flask(__name__)
 
-# register blueprints
+app.register_blueprint(areas_blueprint)
 
 @app.route("/")
 def index():
