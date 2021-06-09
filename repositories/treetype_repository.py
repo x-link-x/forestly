@@ -3,7 +3,7 @@ from models.treetype import TreeType
 
 def save(tree_type):
     sql = "INSERT INTO tree_types (name) VALUES (%s) RETURNING *"
-    values = [tree_type]
+    values = [tree_type.name]
     results = run_sql(sql, values)
     id = results[0]['id']
     tree_type.id = id
