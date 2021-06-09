@@ -15,6 +15,8 @@ CREATE TABLE areas (
 
 CREATE TABLE trees (
     id SERIAL PRIMARY KEY,
+    approx_age INT,
+    tree_type VARCHAR(255),
     x INT,
     y INT,
     area VARCHAR(255)
