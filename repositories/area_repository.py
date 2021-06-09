@@ -10,8 +10,13 @@ def save(area):
     return area
 
 def select_all():
-    pass
-
+    areas = []
+    sql = "SELECT * FROM areas"
+    results = run_sql(sql)
+    for row in results:
+        area = Area(row["easting"], row["northing"], row["id"])
+        areas.append(area)
+    return areas
 
 def delete_all():
     sql = "DELETE FROM areas"

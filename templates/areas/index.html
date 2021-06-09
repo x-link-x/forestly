@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Locations</h2>
+
+<div id="areas-container">
+    <ul>
+        {% for area in areas %}
+        <li><a href="#">Grid Reference: {{area.get_grid_reference()}}</a></li>
+        <li><form action="#" method="POST"><button>Delete</button></form></li>
+        {% endfor %}
+        
+    </ul>
+</div>
+    
+{% endblock content %}
