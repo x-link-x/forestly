@@ -9,3 +9,8 @@ areas_blueprint = Blueprint('area', __name__)
 def areas():
     areas = area_repository.select_all()
     return render_template("areas/index.html", areas=areas)
+
+
+@areas_blueprint.route("/areas/new")
+def new_area():
+    return render_template("areas/new.html")

@@ -4,12 +4,20 @@
 <form action="/areas" method="post">
 
     <div>
-      <label for="easting">Area Easting:</label>
-      <input type="text" minlenght=2 maxlength=2 id="easting" name="easting" placeholder="00" required autofocus>
+        <label for="easting">Area Easting:</label>
+        <select id="easting" name="easting" required>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+        </select>
     </div>
     <div>
-      <label for="northing">Area Northing:</label>
-      <input type="text" minlenght=2 maxlength=2 id="northing" name="northing" placeholder="00" required>
+        <label for="northing">Area Northing:</label>
+        <select id="northing" name="northing" required>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+        </select>
     </div>
 
     <button type="submit">Add Location</button>
