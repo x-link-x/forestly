@@ -23,7 +23,13 @@ def delete_all():
     run_sql(sql)
 
 def select(id):
-    pass
+    area = None
+    sql = "SELECT * FROM areas WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        area = Area(result["easting"], result["northing"], result["id"])
+    return area
 
 def delete(id):
     pass
