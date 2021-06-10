@@ -24,7 +24,13 @@ def delete_all():
     run_sql(sql)
 
 def select(id):
-    pass
+    tree_type = None
+    sql = "SELECT * FROM tree_types WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        tree_type = TreeType(result["name"], result["id"])
+    return tree_type
 
 def delete(id):
     pass
