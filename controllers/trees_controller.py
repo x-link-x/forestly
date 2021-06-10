@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import render_template, redirect, request
 from flask import Blueprint 
 from models.tree import Tree
 import repositories.tree_repository as tree_repository
