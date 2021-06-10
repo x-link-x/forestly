@@ -10,7 +10,13 @@ def treetypes():
     tree_types = treetype_repository.select_all()
     return render_template("tree_types/index.html", tree_types=tree_types)
 
-
 @treetypes_blueprint.route("/treetypes/new")
 def new_treetype():
     return render_template("tree_types/new.html")
+
+@treetypes_blueprint.route("/treetypes", methods=["POST"])
+def create_treetype():
+    name = request.form["tree-type"]
+    tree_type = TreeType(name)
+    treetype_repository.save(tree_type)
+    return redirect("/treetypes")
