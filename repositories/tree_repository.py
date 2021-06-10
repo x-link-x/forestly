@@ -1,5 +1,7 @@
 from db.run_sql import run_sql
 from models.tree import Tree
+import repositories.treetype_repository as treetype_repository
+import repositories.area_repository as area_repository
 
 def save(tree):
     sql = "INSERT INTO trees (approx_age, tree_type_id, x, y, area_id) VALUES (%s, %s, %s, %s, %s) RETURNING *"
@@ -10,7 +12,15 @@ def save(tree):
     return tree
 
 def select_all():
-    pass
+    trees = []
+    sql = "SELECT * FROM trees"
+    results = run_sql(sql)
+    for row in results:
+        tree_type = treetype_repository.select(row['tree_type'])
+        area = area_repository.select(row['area'])
+        tree = Tree(row["approx_age"], tree_type, area, row["x"], row["y"], row["id"])
+        trees.append(tree)
+    return trees
 
 
 def delete_all():

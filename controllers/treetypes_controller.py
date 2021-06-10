@@ -8,4 +8,4 @@ treetypes_blueprint = Blueprint('tree_type', __name__)
 @treetypes_blueprint.route("/treetypes")
 def treetypes():
     tree_types = treetype_repository.select_all()
-    return render_template("treetypes/index.html", tree_types=tree_types)
+    return render_template("tree_types/index.html", tree_types=tree_types)

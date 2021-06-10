@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Species</h2>
+
+<div id="species-container">
+    <ul>
+        {% for tree_type in tree_types %}
+        <li><a href="#">{{tree_type.name}}</a></li>
+        <li><form action="#" method="POST"><button>Delete</button></form></li>
+        {% endfor %}
+    </ul>
+</div>
+    
+{% endblock content %}
