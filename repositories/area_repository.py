@@ -30,3 +30,6 @@ def delete(id):
 
 def update(tree):
     pass
+
+def trees():
+    pass

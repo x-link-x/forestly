@@ -10,7 +10,13 @@ def save(tree_type):
     return tree_type
 
 def select_all():
-    pass
+    tree_types = []
+    sql = "SELECT * FROM tree_types"
+    results = run_sql(sql)
+    for row in results:
+        tree_type = TreeType(row["name"], row["id"])
+        tree_types.append(tree_type)
+    return tree_types
 
 
 def delete_all():
