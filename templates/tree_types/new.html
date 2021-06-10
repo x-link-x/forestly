@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/treetypes" method="post">
+
+    <div>
+      <label for="tree-type">Species Name:</label>
+      <input type="text" id="tree-type" name="tree-type" placeholder="Oak" required autofocus>
+    </div>
+
+    <button type="submit">Add Species</button>
+  
+</form>
+    
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Trees</h2>
+
+<div id="trees-container">
+    <ul>
+        {% for tree in trees %}
+        <li><a href="#">Tree {{tree.id}}</a></li>
+        <li>Species: {{tree.tree_type}}</li>
+        <li>Approximately {{tree.approx_age}} years old</li>
+        <li>Grid reference location: {{tree.get_location()}}</li>
+
+        <li><form action="#" method="POST"><button>Delete</button></form></li>
+        {% endfor %}
+    </ul>
+</div>
+    
+{% endblock content %}

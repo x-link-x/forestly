@@ -16,9 +16,10 @@ def select_all():
     sql = "SELECT * FROM trees"
     results = run_sql(sql)
     for row in results:
-        tree_type = treetype_repository.select(row['tree_type'])
-        area = area_repository.select(row['area'])
-        tree = Tree(row["approx_age"], tree_type, area, row["x"], row["y"], row["id"])
+        tree_type = treetype_repository.select(row['tree_type_id'])
+        area = area_repository.select(row['area_id'])
+        grid_reference = area.get_grid_reference()
+        tree = Tree(row["approx_age"], tree_type.name, grid_reference, row["x"], row["y"], row["id"])
         trees.append(tree)
     return trees
 
