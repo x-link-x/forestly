@@ -30,7 +30,7 @@ def select(id):
     if result is not None:
         area = Area(result["easting"], result["northing"], result["id"])
     return area
-
+    
 def delete(id):
     pass
 

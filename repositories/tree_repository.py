@@ -4,8 +4,8 @@ import repositories.treetype_repository as treetype_repository
 import repositories.area_repository as area_repository
 
 def save(tree):
-    sql = "INSERT INTO trees (approx_age, tree_type_id, x, y, area_id) VALUES (%s, %s, %s, %s, %s) RETURNING *"
-    values = [tree.approx_age, tree.tree_type.id, tree.x, tree.y, tree.area.id]
+    sql = "INSERT INTO trees (approx_age, tree_type_id, area_id, x, y) VALUES (%s, %s, %s, %s, %s) RETURNING *"
+    values = [tree.approx_age, tree.tree_type.id, tree.area.id, tree.x, tree.y]
     results = run_sql(sql, values)
     id = results[0]['id']
     tree.id = id
@@ -29,10 +29,19 @@ def delete_all():
     run_sql(sql)
 
 def select(id):
-    pass
+    tree = None
+    sql = "SELECT * FROM trees WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        tree_type = treetype_repository.select(result["tree_type"])
+        area = area_repository.select(result["area"])
+        tree = Tree(result["approx_age"], tree_type, area, result["x"], result["y"], result["id"])
+    return tree
+   
 
 def delete(id):
     pass
 
 def update(tree):
-    pass
+    

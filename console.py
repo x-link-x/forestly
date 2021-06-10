@@ -1,6 +1,7 @@
 import repositories.area_repository as area_repository
 import repositories.treetype_repository as treetype_repository
 import repositories.tree_repository as tree_repository
+import pdb
 
 from models.area import Area
 from models.treetype import TreeType
@@ -52,5 +53,12 @@ tree2 = Tree(10, ash, area0000, 2, 8)
 tree_repository.save(tree1)
 tree_repository.save(tree2)
 
+tree_repository.select(2)
+
+# print(area_repository.select(area0000.id).id)
+# print(treetype_repository.select(oak.id).id)
+
 # print(tree1.tree_type)
 # print(tree2.area.get_grid_reference())
+
+pdb.set_trace()

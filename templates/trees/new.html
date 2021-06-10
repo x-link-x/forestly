@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<form action="/areas" method="post">
+<form action="/trees" method="post">
 
     <div>
         <label for="approx_age">Approximate age: </label>
         <input type="number" name="approx_age" id="approx_age" required>
     </div>
     <div>
-        <label for="tree-type">Tree Species: </label>
-        <select name="tree-type" id="tree-type">
+        <label for="treetype">Tree Species: </label>
+        <select name="treetype_id" id="treetype">
             {% for tree_type in tree_types %}
             <option value="{{tree_type.id}}">{{tree_type.name}}</option>
             {% endfor %}
         </select>
     </div>
     <div>
-        <label for="area">Area Grid Reference: </label>
-        <select name="area" id="area">
+        <label for="area_id">Area Grid Reference: </label>
+        <select name="area_id" id="area_id">
             {% for area in areas %}
             <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
             {% endfor %}
