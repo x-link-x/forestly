@@ -14,3 +14,11 @@ def areas():
 @areas_blueprint.route("/areas/new")
 def new_area():
     return render_template("areas/new.html")
+
+@areas_blueprint.route("/areas", methods=["POST"])
+def create_area():
+    easting = request.form["easting"]
+    northing = request.form["northing"]
+    area = Area(easting, northing)
+    area_repository.save(area)
+    return redirect("/areas")
