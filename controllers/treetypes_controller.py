@@ -9,3 +9,8 @@ treetypes_blueprint = Blueprint('tree_type', __name__)
 def treetypes():
     tree_types = treetype_repository.select_all()
     return render_template("tree_types/index.html", tree_types=tree_types)
+
+
+@treetypes_blueprint.route("/treetypes/new")
+def new_treetype():
+    return render_template("tree_types/new.html")
