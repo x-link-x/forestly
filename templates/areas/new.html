@@ -1,1 +1,19 @@
-<!-- make sure that area can only be 4 chars long, same with edit/update -->
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/areas" method="post">
+
+    <div>
+      <label for="easting">Area Easting:</label>
+      <input type="text" minlenght=2 maxlength=2 id="easting" name="easting" placeholder="00" required autofocus>
+    </div>
+    <div>
+      <label for="northing">Area Northing:</label>
+      <input type="text" minlenght=2 maxlength=2 id="northing" name="northing" placeholder="00" required>
+    </div>
+
+    <button type="submit">Add Location</button>
+  
+</form>
+    
+{% endblock content %}
