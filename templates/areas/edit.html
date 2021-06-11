@@ -5,11 +5,53 @@
 
     <div>
         <label for="easting">Easting:</label>
-        <input id="easting" type="number" value="{{area.easting}}" name="easting" required>
+        <select id="easting" name="easting">
+            <option value="00"
+            {% if area.easting == "00" %} selected {% endif %}>
+            00
+            </option>
+            <option value="01"
+            {% if area.easting == "01" %} selected {% endif %}>
+            01
+            </option>
+            <option value="02"
+            {% if area.easting == "02" %} selected {% endif %}>
+            02
+            </option>
+            <option value="03"
+            {% if area.easting == "03" %} selected {% endif %}>
+            03
+            </option>
+            <option value="04"
+            {% if area.easting == "04" %} selected {% endif %}>
+            04
+            </option>
+        </select>
     </div>
     <div>
         <label for="northing">Northing:</label>
-        <input id="northing" type="number" value="{{area.northing}}" name="northing" required>
+        <select id="northing" name="northing">
+            <option value="00"
+            {% if area.northing == "00" %} selected {% endif %}>
+            00
+            </option>
+            <option value="01"
+            {% if area.northing == "01" %} selected {% endif %}>
+            01
+            </option>
+            <option value="02"
+            {% if area.northing == "02" %} selected {% endif %}>
+            02
+            </option>
+            <option value="03"
+            {% if area.northing == "03" %} selected {% endif %}>
+            03
+            </option>
+            <option value="04"
+            {% if area.northing == "04" %} selected {% endif %}>
+            04
+            </option>
+        </select>
     </div>
    
     <button type="submit">Update Area</button>

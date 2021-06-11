@@ -2,7 +2,6 @@ from db.run_sql import run_sql
 from models.area import Area
 from models.tree import Tree
 import repositories.variety_repository as variety_repository
-import repositories.tree_repository as tree_repository
 
 def save(area):
     sql = "INSERT INTO areas (easting, northing) VALUES (%s, %s) RETURNING *"
@@ -35,7 +34,9 @@ def select(id):
     return area
     
 def update(area):
-    pass
+    sql = "UPDATE areas SET (easting, northing) = (%s, %s) WHERE id = %s"
+    values = [area.easting, area.northing, area.id]
+    run_sql(sql, values)
 
 def trees(area):
     trees = []

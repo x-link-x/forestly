@@ -34,3 +34,11 @@ def show_area(id):
 def edit_area(id):
     area = area_repository.select(id)
     return render_template("areas/edit.html", area=area)
+
+@areas_blueprint.route("/areas/<id>", methods=["POST"])
+def update_area(id):
+    easting = request.form["easting"]
+    northing = request.form["northing"]
+    updated_area = Area(easting, northing, id)
+    area_repository.update(updated_area)
+    return redirect("/areas")
