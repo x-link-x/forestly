@@ -58,6 +58,3 @@ def update_tree(id):
     updated_tree = Tree(approx_age, variety_id, area_id, x, y, id)
     tree_repository.update(updated_tree)
     return redirect("/trees")
-
-    
-

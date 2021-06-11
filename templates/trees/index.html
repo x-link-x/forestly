@@ -12,7 +12,7 @@
     <ul>
         {% for tree in trees %}
         <li><a href="trees/{{tree.id}}">Tree {{tree.id}}</a></li>
-        <li>Variety: {{tree.variety}}</li>
+        <li>Species: {{tree.variety}}</li>
         <li>Approximately {{tree.approx_age}} years old</li>
         <li>Grid reference location: {{tree.get_location()}}</li>
 

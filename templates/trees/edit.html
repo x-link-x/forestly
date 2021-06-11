@@ -8,7 +8,7 @@
         <input type="number" min=0 name="approx_age" id="approx_age" required>
     </div>
     <div>
-        <label for="variety">Tree Variety: </label>
+        <label for="variety">Tree Species: </label>
         <select name="variety_id" id="variety">
             {% for variety in varieties %}
             <option value="{{variety.id}}">{{variety.name}}</option>

@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div>
+<div id="area-info">
     <h2>Area{{area.get_grid_reference()}}</h2>
 
     <h4>Trees:</h4>
+    {% if trees|length > 0 %}
     <ul>
         {% for tree in trees %}
         <li>{{tree.variety.name}}</li>
         {% endfor %}
-    </ul>
+    </ul> 
+    {% else %}
+        <p>No trees to show</p>
+    {% endif %}
+        
+    
+    
 
     <a href="/areas/{{area.id}}/edit">Edit Area</a>
 </div>
