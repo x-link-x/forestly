@@ -11,7 +11,7 @@
 <div id="varieties-container">
     <ul>
         {% for variety in varieties %}
-        <li><a href="#">{{variety.name}}</a></li>
+        <li><a href="/varieties/{{variety.id}}">{{variety.name}}</a></li>
         <li><form action="/varieties" method="POST"><button>Delete</button></form></li>
         {% endfor %}
     </ul>

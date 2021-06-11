@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/varieties/{{variety.id}}" method="POST">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="{{variety.name}}">
+    </div>
+   
+    <button type="submit">Update Area</button>
+
+</form>
+    
+{% endblock content %}

@@ -21,6 +21,21 @@ def create_variety():
     variety_repository.save(variety)
     return redirect("/varieties")
 
+@varieties_blueprint.route("/varieties/<id>")
+def show_variety(id):
+    variety = variety_repository.select(id)
+    trees = variety_repository.trees(variety)
+    return render_template("varieties/show.html", variety=variety, trees=trees)
+
+@varieties_blueprint.route("/varieties/<id>/edit")
+def edit_variety(id):
+    variety = variety_repository.select(id)
+    return render_template("varieties/edit.html", variety=variety)
+
+@varieties_blueprint.route("/varieties", methods=["POST"])
+def update_variety(id):
+    pass
+
 @varieties_blueprint.route("/varieties/<id>/delete", methods=["POST"])
 def delete_variety(id):
     variety_repository.delete(id)
