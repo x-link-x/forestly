@@ -23,7 +23,6 @@ def create_area():
     area_repository.save(area)
     return redirect("/areas")
 
-
 @areas_blueprint.route("/areas/<id>")
 def show_area(id):
     area = area_repository.select(id)
@@ -34,6 +33,11 @@ def show_area(id):
 def edit_area(id):
     area = area_repository.select(id)
     return render_template("areas/edit.html", area=area)
+
+@areas_blueprint.route("/areas/<id>/delete", methods=["POST"])
+def delete_area(id):
+    area_repository.delete(id)
+    return redirect("/areas")
 
 @areas_blueprint.route("/areas/<id>", methods=["POST"])
 def update_area(id):

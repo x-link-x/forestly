@@ -43,6 +43,11 @@ def edit_tree(id):
     varieties = variety_repository.select_all()  
     return render_template("trees/edit.html", tree=tree, areas=areas, varieties=varieties)
 
+@trees_blueprint.route("/trees/<id>/delete", methods=["POST"])
+def delete_tree(id):
+    tree_repository.delete(id)
+    return redirect("/trees")
+
 @trees_blueprint.route("/trees/<id>", methods=["POST"])
 def update_tree(id):
     approx_age = request.form["approx_age"]

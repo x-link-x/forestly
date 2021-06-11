@@ -38,6 +38,11 @@ def update(area):
     values = [area.easting, area.northing, area.id]
     run_sql(sql, values)
 
+def delete(id):
+    sql = "DELETE FROM areas WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 def trees(area):
     trees = []
     sql = "SELECT trees.* FROM trees WHERE trees.area_id = %s"

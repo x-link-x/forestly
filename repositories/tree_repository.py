@@ -40,7 +40,9 @@ def select(id):
     return tree
 
 def delete(id):
-    pass
+    sql = "DELETE FROM trees WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def update(tree):
     sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y) = (%s, %s, %s, %s, %s) WHERE id = %s"
