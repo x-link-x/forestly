@@ -11,8 +11,16 @@
 <div id="varieties-container">
     <ul>
         {% for variety in varieties %}
-        <li><a href="/varieties/{{variety.id}}">{{variety.name}}</a></li>
-        <li><form action="/varieties/{{variety.id}}/delete" method="POST"><button>Delete</button></form></li>
+        <li>
+            <a href="/varieties/{{variety.id}}">{{variety.name}}</a>
+            <form action="/varieties/{{variety.id}}/delete" method="POST">
+                <button>
+                    <span class="material-icons">
+                        delete
+                    </span>
+                </button>
+            </form>
+        </li>
         {% endfor %}
     </ul>
 </div>

@@ -11,12 +11,20 @@
 <div id="trees-container">
     <ul>
         {% for tree in trees %}
-        <li><a href="trees/{{tree.id}}">Tree {{tree.id}}</a></li>
-        <li>Species: {{tree.variety}}</li>
-        <li>Approximately {{tree.approx_age}} years old</li>
-        <li>Grid reference location: {{tree.get_location()}}</li>
+        <li>
+            <a href="trees/{{tree.id}}">Tree {{tree.id}}</a>
+            <p>Species: {{tree.variety}}</p>
+            <p>Approximately {{tree.approx_age}} years old</p>
+            <p>Location: {{tree.get_location()}}</p>
 
-        <li><form action="/trees/{{tree.id}}/delete" method="POST"><button>Delete</button></form></li>
+            <form action="/trees/{{tree.id}}/delete" method="POST">
+                <button>
+                    <span class="material-icons">
+                        delete
+                    </span>
+                </button>
+            </form>
+        </li>
         {% endfor %}
     </ul>
 </div>

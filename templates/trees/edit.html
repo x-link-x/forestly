@@ -8,7 +8,7 @@
         <input type="number" min=0 name="approx_age" id="approx_age" required>
     </div>
     <div>
-        <label for="variety">Tree Species: </label>
+        <label for="variety">Tree species: </label>
         <select name="variety_id" id="variety">
             {% for variety in varieties %}
             <option value="{{variety.id}}">{{variety.name}}</option>
@@ -16,7 +16,7 @@
         </select>
     </div>
     <div>
-        <label for="area">Area Grid Reference: </label>
+        <label for="area">Area grid reference: </label>
         <select name="area_id" id="area">
             {% for area in areas %}
             <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
@@ -24,7 +24,7 @@
         </select>
     </div>
     <div>
-        <label for="x">Grid Reference x coordinate:</label>
+        <label for="x">Grid reference x coordinate:</label>
         <select id="x" name="x" required>
             <option value="0">0</option>
             <option value="1">1</option>
@@ -39,7 +39,7 @@
         </select>
     </div>
     <div>
-        <label for="y">Grid Reference y coordinate:</label>
+        <label for="y">Grid reference y coordinate:</label>
         <select id="y" name="y" required>
             <option value="0">0</option>
             <option value="1">1</option>
