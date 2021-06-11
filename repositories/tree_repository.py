@@ -4,8 +4,8 @@ import repositories.variety_repository as variety_repository
 import repositories.area_repository as area_repository
 
 def save(tree):
-    sql = "INSERT INTO trees (approx_age, variety_id, area_id, x, y) VALUES (%s, %s, %s, %s, %s) RETURNING *"
-    values = [tree.approx_age, tree.variety.id, tree.area.id, tree.x, tree.y]
+    sql = "INSERT INTO trees (approx_age, variety_id, area_id, x, y, notes) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [tree.approx_age, tree.variety.id, tree.area.id, tree.x, tree.y, tree.notes]
     results = run_sql(sql, values)
     id = results[0]['id']
     tree.id = id
@@ -19,7 +19,7 @@ def select_all():
         variety = variety_repository.select(row['variety_id'])
         area = area_repository.select(row['area_id'])
         grid_reference = area.get_grid_reference()
-        tree = Tree(row["approx_age"], variety.name, grid_reference, row["x"], row["y"], row["id"])
+        tree = Tree(row["approx_age"], variety.name, grid_reference, row["x"], row["y"], row["notes"], row["id"])
         trees.append(tree)
     return trees
 
@@ -36,7 +36,7 @@ def select(id):
     if result is not None:
         variety = variety_repository.select(result["variety_id"])
         area = area_repository.select(result["area_id"])
-        tree = Tree(result["approx_age"], variety, area, result["x"], result["y"], result["id"])
+        tree = Tree(result["approx_age"], variety, area, result["x"], result["y"], result["notes"], result["id"])
     return tree
 
 def delete(id):
@@ -45,6 +45,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(tree):
-    sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [tree.approx_age, tree.variety, tree.area, tree.x, tree.y, tree.id]
+    sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y, notes) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [tree.approx_age, tree.variety, tree.area, tree.x, tree.y, tree.notes, tree.id]
     run_sql(sql, values)

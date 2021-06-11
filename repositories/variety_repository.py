@@ -50,6 +50,6 @@ def trees(variety):
     results = run_sql(sql, values)
     for row in results:
         area = area_repository.select(row["area_id"])
-        tree = Tree(row["approx_age"], variety, area, row["x"], row["y"], row["id"])
+        tree = Tree(row["approx_age"], variety, area, row["x"], row["y"], row["notes"], row["id"])
         trees.append(tree)
     return trees

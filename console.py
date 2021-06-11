@@ -47,8 +47,8 @@ area_repository.save(area0002)
 area_repository.save(area0102)
 area_repository.save(area0202)
 
-tree1 = Tree(3, oak, area0102, 7, 4)
-tree2 = Tree(10, ash, area0000, 2, 8)
+tree1 = Tree(3, oak, area0102, 7, 4, "new sapling")
+tree2 = Tree(10, ash, area0000, 2, 8, "established tree")
 
 tree_repository.save(tree1)
 tree_repository.save(tree2)

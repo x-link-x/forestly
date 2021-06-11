@@ -19,7 +19,8 @@ CREATE TABLE trees (
     variety_id INT REFERENCES varieties(id) ON DELETE CASCADE,
     area_id INT REFERENCES areas(id) ON DELETE CASCADE,
     x INT,
-    y INT
+    y INT,
+    notes TEXT
 
 );
 

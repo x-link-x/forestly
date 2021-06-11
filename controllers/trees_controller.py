@@ -27,7 +27,8 @@ def create_tree():
     area = area_repository.select(area_id)
     x = request.form["x"]
     y = request.form["y"]
-    tree = Tree(approx_age, variety, area, x, y)
+    notes = request.form["notes"]
+    tree = Tree(approx_age, variety, area, x, y, notes)
     tree_repository.save(tree)
     return redirect("/trees")
 
@@ -55,6 +56,7 @@ def update_tree(id):
     area_id = request.form["area_id"]
     x = request.form["x"]
     y = request.form["y"]
-    updated_tree = Tree(approx_age, variety_id, area_id, x, y, id)
+    notes = request.form["notes"]
+    updated_tree = Tree(approx_age, variety_id, area_id, x, y, notes, id)
     tree_repository.update(updated_tree)
     return redirect("/trees")

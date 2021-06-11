@@ -6,6 +6,7 @@
     <p>Species: {{tree.variety.name}}</p>
     <p>Approximately {{tree.approx_age}} years old</p>
     <p>Location: {{tree.area.get_grid_reference()[:2]}}{{tree.x}}{{tree.area.get_grid_reference()[2:4]}}{{tree.y}}</p>
+    <p>Notes: {{tree.notes}}</p>
 
     <a href="/trees/{{tree.id}}/edit">Edit Tree</a>
 </div>
