@@ -9,7 +9,7 @@ body {
     text-align: center;
     background-color: mintcream;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
 }
 
 .content {
@@ -165,3 +165,12 @@ button {
 .edit-button {
     padding-top: 15px;
 }
+
+.textarea {
+    clear: left;
+    text-align: center;
+  }
+  
+  .textarea > * {
+    vertical-align: middle;
+  }

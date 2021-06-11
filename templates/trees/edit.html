@@ -5,7 +5,7 @@
 
     <div>
         <label for="approx_age">Approximate age: </label>
-        <input type="number" min=0 name="approx_age" id="approx_age" required>
+        <input type="number" min=0 name="approx_age" id="approx_age" value="{{tree.approx_age}}" required>
     </div>
     <div>
         <label for="variety">Tree species: </label>
@@ -53,9 +53,9 @@
             <option value="9">9</option>
         </select>
     </div>
-    <div>
+    <div class=textarea>
         <label for="notes">Notes:</label>
-        <textarea name="notes" id="notes" cols="30" rows="10" value="notes"></textarea>
+        <textarea name="notes" id="notes" cols="30" rows="10" value="notes">{{tree.notes}}</textarea>
     </div>
 
     <button type="submit">Update Tree</button>
