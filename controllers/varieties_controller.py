@@ -32,9 +32,12 @@ def edit_variety(id):
     variety = variety_repository.select(id)
     return render_template("varieties/edit.html", variety=variety)
 
-@varieties_blueprint.route("/varieties", methods=["POST"])
+@varieties_blueprint.route("/varieties/<id>", methods=["POST"])
 def update_variety(id):
-    pass
+    name = request.form["name"]
+    updated_variety = Variety(name, id)
+    variety_repository.update(updated_variety)
+    return redirect("/varieties")
 
 @varieties_blueprint.route("/varieties/<id>/delete", methods=["POST"])
 def delete_variety(id):

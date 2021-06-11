@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import render_template, redirect, request
 from flask import Blueprint 
 from models.area import Area
 import repositories.area_repository as area_repository
