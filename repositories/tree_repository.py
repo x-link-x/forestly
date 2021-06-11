@@ -45,6 +45,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(tree):
-    sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y, notes) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y, notes) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [tree.approx_age, tree.variety, tree.area, tree.x, tree.y, tree.notes, tree.id]
     run_sql(sql, values)
