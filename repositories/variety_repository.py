@@ -40,7 +40,7 @@ def delete(id):
     run_sql(sql, values)
 
 def update(variety):
-    sql = "UPDATE varieties SET (name) = (%s) WHERE id = %s"
+    sql = "UPDATE varieties SET (name) = ROW(%s) WHERE id = %s"
     values = [variety.name, variety.id]
     run_sql(sql, values)
 
