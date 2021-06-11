@@ -153,3 +153,15 @@ button {
 #highlight {
     font-weight: bold;
 }
+
+#area-info > ul {
+    display: inline;
+}
+
+#variety-info > ul {
+    display: inline;
+}
+
+.edit-button {
+    padding-top: 15px;
+}

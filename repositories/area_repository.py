@@ -52,4 +52,5 @@ def trees(area):
         variety = variety_repository.select(row["variety_id"])
         tree = Tree(row["approx_age"], variety, area, row["x"], row["y"], row["id"])
         trees.append(tree)
+        trees.sort(key=lambda tree: tree.variety.name)
     return trees

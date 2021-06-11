@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div>
+<div id="variety-info">
     <h2>{{variety.name}}</h2>
     <p>Locations:</p>
     <ul>
@@ -9,8 +9,9 @@
         <li>{{tree.area.get_grid_reference()[:2]}}{{tree.x}}{{tree.area.get_grid_reference()[2:4]}}{{tree.y}}</li>
         {% endfor %}
     </ul>
-
-    <a href="/varieties/{{variety.id}}/edit">Edit Species</a>
+</div>
+<div class="edit-button">
+    <a href="/varieties/{{variety.id}}/edit" class="edit-button">Edit Species</a>
 </div>
     
 {% endblock content %}
