@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from controllers.areas_controller import areas_blueprint
-from controllers.treetypes_controller import treetypes_blueprint
+from controllers.varieties_controller import varieties_blueprint
 from controllers.trees_controller import trees_blueprint
 
 app = Flask(__name__)
 
 app.register_blueprint(areas_blueprint)
-app.register_blueprint(treetypes_blueprint)
+app.register_blueprint(varieties_blueprint)
 app.register_blueprint(trees_blueprint)
 
 @app.route("/")

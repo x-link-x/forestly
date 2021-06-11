@@ -1,7 +1,7 @@
 class Tree:
-    def __init__(self, approx_age, tree_type, area, x, y, id=None):
+    def __init__(self, approx_age, variety, area, x, y, id=None):
         self.approx_age = approx_age
-        self.tree_type = tree_type
+        self.variety = variety
         self.area = area
         self.x = x
         self.y = y

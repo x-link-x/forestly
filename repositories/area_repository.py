@@ -1,5 +1,8 @@
 from db.run_sql import run_sql
 from models.area import Area
+from models.tree import Tree
+import repositories.variety_repository as variety_repository
+import repositories.tree_repository as tree_repository
 
 def save(area):
     sql = "INSERT INTO areas (easting, northing) VALUES (%s, %s) RETURNING *"
@@ -31,11 +34,16 @@ def select(id):
         area = Area(result["easting"], result["northing"], result["id"])
     return area
     
-def delete(id):
+def update(area):
     pass
 
-def update(tree):
-    pass
-
-def trees():
-    pass
+def trees(area):
+    trees = []
+    sql = "SELECT trees.* FROM trees WHERE trees.area_id = %s"
+    values = [area.id]
+    results = run_sql(sql, values)
+    for row in results:
+        variety = variety_repository.select(row["variety_id"])
+        tree = Tree(row["approx_age"], variety, area, row["x"], row["y"], row["id"])
+        trees.append(tree)
+    return trees

@@ -8,16 +8,16 @@
         <input type="number" name="approx_age" id="approx_age" required>
     </div>
     <div>
-        <label for="treetype">Tree Species: </label>
-        <select name="treetype_id" id="treetype">
-            {% for tree_type in tree_types %}
-            <option value="{{tree_type.id}}">{{tree_type.name}}</option>
+        <label for="">Tree Variety: </label>
+        <select name="variety_id" id="variety">
+            {% for variety in varieties %}
+            <option value="{{variety.id}}">{{variety.name}}</option>
             {% endfor %}
         </select>
     </div>
     <div>
-        <label for="area_id">Area Grid Reference: </label>
-        <select name="area_id" id="area_id">
+        <label for="area">Area Grid Reference: </label>
+        <select name="area_id" id="area">
             {% for area in areas %}
             <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
             {% endfor %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Tree Varieties</h2>
+<a href="/varieties/new">
+    <span class="material-icons">
+        add
+    </span>
+</a>
+
+<div id="varieties-container">
+    <ul>
+        {% for variety in varieties %}
+        <li><a href="#">{{variety.name}}</a></li>
+        <li><form action="/varieties" method="POST"><button>Delete</button></form></li>
+        {% endfor %}
+    </ul>
+</div>
+    
+{% endblock content %}

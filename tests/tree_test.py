@@ -1,5 +1,5 @@
 import unittest
-from forest.models.tree import Tree
+from models.tree import Tree
 
 class TestTree(unittest.TestCase):
     def setUp(self):
@@ -10,9 +10,9 @@ class TestTree(unittest.TestCase):
         actual = self.tree.approx_age
         self.assertEqual(expected, actual)
 
-    def test_tree_has_type(self):
+    def test_tree_has_variety(self):
         expected = "Oak"
-        actual = self.tree.tree_type
+        actual = self.tree.variety
         self.assertEqual(expected, actual)
 
     def test_tree_get_location_method_returns_017024(self):

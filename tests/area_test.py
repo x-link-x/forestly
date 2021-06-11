@@ -1,5 +1,5 @@
 import unittest
-from forest.models.area import Area
+from models.area import Area
 
 class TestArea(unittest.TestCase):
     def setUp(self):

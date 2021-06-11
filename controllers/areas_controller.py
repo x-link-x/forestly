@@ -22,3 +22,15 @@ def create_area():
     area = Area(easting, northing)
     area_repository.save(area)
     return redirect("/areas")
+
+
+@areas_blueprint.route("/areas/<id>")
+def show_area(id):
+    area = area_repository.select(id)
+    trees = area_repository.trees()
+    return render_template("areas/show.html", area=area, trees=trees)
+
+@areas_blueprint.route("/areas/<id>/edit")
+def edit_area(id):
+    area = area_repository.select(id)
+    return render_template("areas/edit.html")
