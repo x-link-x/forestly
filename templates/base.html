@@ -14,21 +14,36 @@
 <body>
     <header>
         <nav>
-            <h1 class="logo">Forestly</h1>
-            <span class="material-icons logo">
-                emoji_nature
-            </span>
+            <div id="logo-container">
+                <h1 class="logo">Forestly</h1>
+                <span class="material-icons logo" id="nature-icon">
+                    emoji_nature
+                </span>
+            </div>
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a id="my-forest-link" href="/forest">My Forest</a></li>
+                <li><a href="/forest">My Forest</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="content">
+
     {% block content %}
     {% endblock content %}
+
+    </div>
+
+    <footer>
+        <ul class="menu" id="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/forest">My Forest</a></li>
+        </ul>
+    </footer>
     
 </body>
 </html>

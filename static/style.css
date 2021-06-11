@@ -1,28 +1,99 @@
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
+    width: 100%;
     text-align: center;
+    background-color: mintcream;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black
 }
 
 .logo {
     float: left;
     position: relative;
-    top: -10px;
+    top: -15px;  
+}
+
+#nature-icon {
+    position:relative;
+    top:8px;
+    left:4px;
 }
 
 .menu {
+    text-align: center;
+    padding-top: 15px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around; 
+}
+
+nav {
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    top: -15px;
 }
 
 .menu > nav > ul > li {
     list-style: none;
     display: inline;
-
 }
 
+#my-forest-link {
+    float: right;
+    position: relative;
+    top: -17px;
+}
 
+#index {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+}
 
-ul {
-    list-style: none;
+#home-container {
+    padding-top: 100px;  
+}
+
+#welcome {
+    padding-top: 50px; 
+    text-align: center;
+}
+
+#door {
+    font-size:xx-large;
+}
+
+#footer-menu {
+    background-color:seagreen;
+    width: 100%;
+    flex-shrink: 0;
+    height:40px;
+    position: relative;
+    top: 17px;
+    justify-content: space-evenly;
+}
+
+#footer-menu > li > a {
+    color:mintcream;
 }
