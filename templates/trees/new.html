@@ -5,10 +5,10 @@
 
     <div>
         <label for="approx_age">Approximate age: </label>
-        <input type="number" name="approx_age" id="approx_age" required>
+        <input type="number" min=0 name="approx_age" id="approx_age" required>
     </div>
     <div>
-        <label for="">Tree Variety: </label>
+        <label for="variety">Tree Variety: </label>
         <select name="variety_id" id="variety">
             {% for variety in varieties %}
             <option value="{{variety.id}}">{{variety.name}}</option>

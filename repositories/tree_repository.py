@@ -38,10 +38,11 @@ def select(id):
         area = area_repository.select(result["area_id"])
         tree = Tree(result["approx_age"], variety, area, result["x"], result["y"], result["id"])
     return tree
-   
 
 def delete(id):
     pass
 
 def update(tree):
-    pass
+    sql = "UPDATE trees SET (approx_age, variety_id, area_id, x, y) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [tree.approx_age, tree.variety, tree.area, tree.x, tree.y, tree.id]
+    run_sql(sql, values)

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    <h2>Tree {{tree.id}}</h2>
+    <p>Variety: {{tree.variety.name}}</p>
+    <p>Location: {{tree.area.get_grid_reference()[:2]}}{{tree.x}}{{tree.area.get_grid_reference()[2:4]}}{{tree.y}}</p>
+
+    <a href="/trees/{{tree.id}}/edit">Edit Tree</a>
+</div>
+    
+{% endblock content %}

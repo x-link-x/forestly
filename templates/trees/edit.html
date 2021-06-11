@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/trees/{{tree.id}}" method="POST">
+
+    <div>
+        <label for="approx_age">Approximate age: </label>
+        <input type="number" min=0 name="approx_age" id="approx_age" required>
+    </div>
+    <div>
+        <label for="variety">Tree Variety: </label>
+        <select name="variety_id" id="variety">
+            {% for variety in varieties %}
+            <option value="{{variety.id}}">{{variety.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="area">Area Grid Reference: </label>
+        <select name="area_id" id="area">
+            {% for area in areas %}
+            <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="x">Grid Reference x coordinate:</label>
+        <select id="x" name="x" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    <div>
+        <label for="y">Grid Reference y coordinate:</label>
+        <select id="y" name="y" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+
+    <button type="submit">Update Tree</button>
+  
+</form>
+    
+{% endblock content %}

@@ -20,11 +20,6 @@ def select_all():
         varieties.append(variety)
     return varieties
 
-
-def delete_all():
-    sql = "DELETE FROM varieties"
-    run_sql(sql)
-
 def select(id):
     variety = None
     sql = "SELECT * FROM varieties WHERE id = %s"
@@ -38,6 +33,10 @@ def delete(id):
     sql = "DELETE FROM varieties WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def delete_all():
+    sql = "DELETE FROM varieties"
+    run_sql(sql)
 
 def update(variety):
     sql = "UPDATE varieties SET (name) = ROW(%s) WHERE id = %s"

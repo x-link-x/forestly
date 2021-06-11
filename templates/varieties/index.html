@@ -12,7 +12,7 @@
     <ul>
         {% for variety in varieties %}
         <li><a href="/varieties/{{variety.id}}">{{variety.name}}</a></li>
-        <li><form action="/varieties" method="POST"><button>Delete</button></form></li>
+        <li><form action="/varieties/{{variety.id}}/delete" method="POST"><button>Delete</button></form></li>
         {% endfor %}
     </ul>
 </div>
