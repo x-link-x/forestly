@@ -3,3 +3,26 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.logo {
+    float: left;
+    position: relative;
+    top: -10px;
+}
+
+.menu {
+    display:flex;
+    justify-content: space-between;
+}
+
+.menu > nav > ul > li {
+    list-style: none;
+    display: inline;
+
+}
+
+
+
+ul {
+    list-style: none;
+}
