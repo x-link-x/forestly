@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/areas/{{area.id}}" method="POST">
+
+    <div>
+        <label for="easting">Easting:</label>
+        <input id="easting" type="number" value="{{area.easting}}" name="easting" required>
+    </div>
+    <div>
+        <label for="northing">Northing:</label>
+        <input id="northing" type="number" value="{{area.northing}}" name="northing" required>
+    </div>
+   
+    <button type="submit">Update Area</button>
+
+</form>
+    
+{% endblock content %}

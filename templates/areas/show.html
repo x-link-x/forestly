@@ -5,11 +5,13 @@
     <h2>Area{{area.get_grid_reference()}}</h2>
 
     <h4>Trees:</h4>
-        
+    <ul>
+        {% for tree in trees %}
+        <li>{{tree.variety.name}}</li>
+        {% endfor %}
+    </ul>
 
-
-
-    <a href="/edit/{{area.id}}"></a>
+    <a href="/areas/{{area.id}}/edit">Edit Area</a>
 </div>
     
 {% endblock content %}
