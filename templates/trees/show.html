@@ -9,6 +9,13 @@
     <p>Notes: {{tree.notes}}</p>
 
     <a href="/trees/{{tree.id}}/edit">Edit Tree</a>
+    <form action="/trees/{{tree.id}}/delete" method="POST">
+        <button>
+            <span class="material-icons">
+                delete
+            </span>
+        </button>
+    </form>
 </div>
     
 {% endblock content %}

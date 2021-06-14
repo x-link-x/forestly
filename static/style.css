@@ -175,18 +175,43 @@ button {
     vertical-align: middle;
   }
 
+
+#map-container {
+    display: flex;
+    justify-content: center;
+}
+
 .map {
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
     border: black 1px solid;
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
     grid-template-rows: repeat(3, 33.3%);
-    grid-gap: 1px;
-    
+    grid-gap: 1px; 
 }
 
 .map > div {
-    background-color: lightgreen;
+    background-color: #B7FFBF;
     outline: 1px solid black;
+    
 }
+
+.map-tree {
+    display: flex;
+}
+
+.grid-square {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+}
+
+
+
+
+
+
+
+
+
