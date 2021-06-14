@@ -22,5 +22,7 @@ class Tree:
     #     flex_translator = {"0002":"justify-content: flex-start; align-items: flex-start;", "0102":"justify-content: center; align-items: flex-start;", "0202":"justify-content: flex-end; align-items: flex-start;", "0001":"justify-content: flex-start; align-items: center;", "0101":"justify-content: center; align-items: center;", "0201":"justify-content: flex-end; align-items: center;", "0000":"justify-content: flex-start; align-items: flex-end;", "0100":"justify-content: center; align-items: flex-end", "0200":"justify-content: flex-end; align-items: flex-end;"}
     #     return flex_translator[key]
 
-    
+    def place_tree(self, grid_ref):
+        if self.area == grid_ref:
+            return f"<span class='material-icons map-tree' style='position: relative; top: -{self.y * 20}px; left: {self.x * 20}px;'><a href='trees/{self.id}'>park</a></span>" 
 

@@ -8,58 +8,19 @@
     </span>
 </a>
 
-<!-- <div id="trees-container">
-    <ul>
-        {% for tree in trees %}
-        <li>
-            <a href="trees/{{tree.id}}">Tree {{tree.id}}</a>
-            <p>Species: {{tree.variety}}</p>
-            <p>Approximately {{tree.approx_age}} years old</p>
-            <p>Location: {{tree.get_location()}}</p>
-
-            <form action="/trees/{{tree.id}}/delete" method="POST">
-                <button>
-                    <span class="material-icons">
-                        delete
-                    </span>
-                </button>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
-</div> -->
-
-<!-- {% for tree in trees %}
-    <p>{{tree.get_css_grid_location(tree.area)}}</p>
-    <span class="material-icons map-tree">
-        <a href="trees/{{tree.id}}">park</a>
-    </span>
-{% endfor %} -->
-
 <div id="map-container">
-
     <div class="map">
-
-        <!-- {% for tree in trees %}
-        <span class="material-icons map-tree" style={{tree.get_css_flex(tree.area)}}>
-            <a href="trees/{{tree.id}}">park</a>
-        </span>
-        {% endfor %} -->
-
-        
         <div class="grid-square">
-            
             {% for tree in trees %}
                 {% if tree.area == "0002" %}
-                <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                    <a href="trees/{{tree.id}}">park</a>
-                </span>
+                    <span class="material-icons map-tree"  style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
                 {% endif %}
             {% endfor %}
         </div>
 
         <div class="grid-square">
-            
             {% for tree in trees %}
                 {% if tree.area == "0102" %}
                     <span class="material-icons map-tree"  style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
@@ -70,84 +31,75 @@
         </div>
 
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0202" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0202" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
     
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0001" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0001" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
 
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0101" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0101" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
         
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0201" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0201" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
     
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0000" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0000" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
 
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0100" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0100" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
 
         <div class="grid-square">
-            
             {% for tree in trees %}
-            {% if tree.area == "0200" %}
-            <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
-                <a href="trees/{{tree.id}}">park</a>
-            </span>
-            {% endif %}
+                {% if tree.area == "0200" %}
+                    <span class="material-icons map-tree" style="position: relative; top: -{{tree.y * 20}}px; left: {{tree.x * 20}}px;">
+                        <a href="trees/{{tree.id}}">park</a>
+                    </span>
+                {% endif %}
             {% endfor %}
         </div>
-
     </div>
-
 </div>
     
 {% endblock content %}
