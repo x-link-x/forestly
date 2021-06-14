@@ -171,6 +171,22 @@ button {
     text-align: center;
   }
   
-  .textarea > * {
+.textarea > * {
     vertical-align: middle;
   }
+
+.map {
+    height: 400px;
+    width: 400px;
+    border: black 1px solid;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(3, 33.3%);
+    grid-gap: 1px;
+    
+}
+
+.map > div {
+    background-color: lightgreen;
+    outline: 1px solid black;
+}

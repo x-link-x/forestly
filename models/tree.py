@@ -16,3 +16,7 @@ class Tree:
         location = f"{a}{self.x}{b}{self.y}"
         return location
 
+    def get_css_grid_location(self, key):
+        grid_translator = {"0002":1, "0102":2, "0202":3, "0001":4, "0101":5, "0201":6, "0000":7, "0100":8, "0200":9}
+        return grid_translator[key]
+
