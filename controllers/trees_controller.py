@@ -4,8 +4,6 @@ from models.tree import Tree
 import repositories.tree_repository as tree_repository
 import repositories.area_repository as area_repository
 import repositories.variety_repository as variety_repository
-from markupsafe import Markup
-
 
 trees_blueprint = Blueprint('trees', __name__)
 

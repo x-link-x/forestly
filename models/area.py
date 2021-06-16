@@ -3,9 +3,6 @@ class Area:
         self.easting = easting
         self.northing = northing
         self.id = id
-        
-        
+          
     def get_grid_reference(self):
         return f"{self.easting}{self.northing}"
-
-    

@@ -53,14 +53,4 @@ tree2 = Tree(10, ash, area0000, 2, 8, "established tree")
 tree_repository.save(tree1)
 tree_repository.save(tree2)
 
-tree_repository.select(tree1.id)
-area_repository.select(area0101.id)
-variety_repository.select(oak.id)
-
-# print(area_repository.select(area0000.id).id)
-# print(variety_repository.select(oak.id).id)
-
-
-# print(tree2.area.get_grid_reference())
-
 pdb.set_trace()

@@ -21,6 +21,5 @@ CREATE TABLE trees (
     x INT,
     y INT,
     notes TEXT
-
 );
 

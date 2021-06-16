@@ -3,7 +3,7 @@ from models.tree import Tree
 
 class TestTree(unittest.TestCase):
     def setUp(self):
-        self.tree = Tree(10, "Oak", "0102", 7, 4)
+        self.tree = Tree(10, "Oak", "0102", 7, 4, "new sapling")
 
     def test_tree_has_age(self):
         expected = 10
