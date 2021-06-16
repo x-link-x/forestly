@@ -2,8 +2,6 @@
 A forest management app
 
 
-Readme
-
 ## Running instructions
 
 - Clone down the repo.
@@ -25,7 +23,7 @@ Readme
 
 
 
-##Brief 
+## Brief 
 
 ### Forest Manager
 
