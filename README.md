@@ -32,7 +32,7 @@ Build an app that allows the user to manage a forest.
 
 #### MVP
 
-- A tree should have an approximate_age, a variety, a location (x and y coordinates) and a get_location method.
+- A tree should have an approximate_age, a variety, and a location (x and y coordinates).
 - An area should have a grid reference (easting and northing) and a method that displays the grid reference. 
 - A tree variety should have a name.
 - The app should allow the user to create and edit trees.

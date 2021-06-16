@@ -8,7 +8,3 @@ class Tree:
         self.notes = notes
         self.id = id
         
-    def get_location(self):
-        a, b = self.area[:2], self.area[2:4]
-        location = f"{a}{self.x}{b}{self.y}"
-        return location

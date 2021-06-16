@@ -15,10 +15,7 @@ class TestTree(unittest.TestCase):
         actual = self.tree.variety
         self.assertEqual(expected, actual)
 
-    def test_tree_get_location_method_returns_017024(self):
-        expected = "017024"
-        actual = self.tree.get_location()
-        self.assertEqual(expected, actual)
+
 
         
 
