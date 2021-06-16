@@ -6,7 +6,7 @@
     <p>Locations:</p>
     <ul>
         {% for tree in trees %}
-        <li>{{tree.area.get_grid_reference()[:2]}}{{tree.x}}{{tree.area.get_grid_reference()[2:4]}}{{tree.y}}</li>
+            <li>{{tree.area.get_grid_reference()[:2]}}{{tree.x}}{{tree.area.get_grid_reference()[2:4]}}{{tree.y}}</li>
         {% endfor %}
     </ul>
 </div>

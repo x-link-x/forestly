@@ -11,7 +11,7 @@
         <label for="variety">Tree species: </label>
         <select name="variety_id" id="variety">
             {% for variety in varieties %}
-            <option value="{{variety.id}}">{{variety.name}}</option>
+                <option value="{{variety.id}}">{{variety.name}}</option>
             {% endfor %}
         </select>
     </div>
@@ -19,7 +19,7 @@
         <label for="area">Area grid reference: </label>
         <select name="area_id" id="area">
             {% for area in areas %}
-            <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
+                <option value="{{area.id}}">{{area.get_grid_reference()}}</option>
             {% endfor %}
         </select>
     </div>

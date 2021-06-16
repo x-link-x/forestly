@@ -9,5 +9,3 @@ class TestVariety(unittest.TestCase):
         expected = "Oak"
         actual = self.variety.name
         self.assertEqual(expected, actual)
-
-

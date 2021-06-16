@@ -11,18 +11,17 @@
 <div id="areas-container">
     <ul>
         {% for area in areas %}
-        <li>
-            <a href="/areas/{{area.id}}">Area {{area.get_grid_reference()}}</a>
-            <form action="/areas/{{area.id}}/delete" method="POST">
-                <button>
-                    <span class="material-icons">
-                        delete
-                    </span>
-                </button>
-            </form>
-        </li>
+            <li>
+                <a href="/areas/{{area.id}}">Area {{area.get_grid_reference()}}</a>
+                <form action="/areas/{{area.id}}/delete" method="POST">
+                    <button>
+                        <span class="material-icons">
+                            delete
+                        </span>
+                    </button>
+                </form>
+            </li>
         {% endfor %}
-        
     </ul>
 </div>
     
