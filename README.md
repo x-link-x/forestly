@@ -1,4 +1,4 @@
-# forestly
+# Forestly
 A forest management app
 
 
