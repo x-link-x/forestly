@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div id="forest-container">
+    <div class="forest-options">
+        <span class="material-icons">
+            park
+        </span>
+        <h3><a href="/trees">Manage Trees</a></h3>
+    </div>
 
-<div class="forest-options">
-    <span class="material-icons">
-        park
-    </span>
-    <h3><a href="/trees">Manage Trees</a></h3>
-</div>
+    <div class="forest-options">
+        <span class="material-icons">
+            account_tree
+        </span>
+        <h3><a href="/varieties">Manage Tree Species</a></h3>
+    </div>
 
-<div class="forest-options">
-    <span class="material-icons">
-        account_tree
-    </span>
-    <h3><a href="/varieties">Manage Tree Species</a></h3>
+    <div class="forest-options">
+        <span class="material-icons">
+            location_on
+        </span>
+        <h3><a href="/areas">Manage Locations</a></h3>
+    </div>
 </div>
-
-<div class="forest-options">
-    <span class="material-icons">
-        location_on
-    </span>
-    <h3><a href="/areas">Manage Locations</a></h3>
-</div>
-    
 {% endblock content %}
