@@ -1,5 +1,5 @@
 # Forestly
-A forest management app built using Python
+A forest management app.
 
 
 ## Running instructions
