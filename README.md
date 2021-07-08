@@ -1,7 +1,7 @@
 # Forestly
 A forest management app built using Python and Flask
 
-![A user-generated grid reference map with tree icons representing tree locations](forestly_map.png?raw=true "A user generated forest map")
+![A user-generated grid reference map with tree icons representing tree locations](/static/forestly_map.png?raw=true "A user generated forest map")
 
 ## Running instructions
 
