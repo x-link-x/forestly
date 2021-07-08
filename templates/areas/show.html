@@ -5,21 +5,18 @@
     <h2>Area {{area.get_grid_reference()}}</h2>
 
     <h4>Trees:</h4>
-    
     {% if trees|length > 0 %}
     <ul>
         {% for tree in trees %}
-            <li>{{tree.variety.name}}</li>
+        <li>{{tree.variety.name}}</li>
         {% endfor %}
     </ul> 
-    
     {% else %}
     <ul>
         <li>No trees to show</li>
     </ul>
-    {% endif %}  
+    {% endif %}
 </div>
-
 <div class="edit-button">
     <a href="/areas/{{area.id}}/edit">Edit Area</a>
 </div>

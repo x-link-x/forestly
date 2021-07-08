@@ -1,7 +1,6 @@
 # Forestly
-A forest management app.
+A forest management app built using
 
-![A user-generated grid reference map with tree icons at tree locations](/static/forestly_map.png?raw=true "A user-generated forest map")
 
 ## Running instructions
 
@@ -33,7 +32,7 @@ Build an app that allows the user to manage a forest.
 
 #### MVP
 
-- A tree should have an approximate_age, a variety, and a location (x and y coordinates).
+- A tree should have an approximate_age, a variety, a location (x and y coordinates) and a get_location method.
 - An area should have a grid reference (easting and northing) and a method that displays the grid reference. 
 - A tree variety should have a name.
 - The app should allow the user to create and edit trees.
@@ -61,8 +60,6 @@ Build an app that allows the user to manage a forest.
 
 - Store each tree's historical data.
 - Give the user options for the map.
-
-
 
 
 ### Technologies used

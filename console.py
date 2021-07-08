@@ -49,18 +49,8 @@ area_repository.save(area0202)
 
 tree1 = Tree(3, oak, area0102, 7, 4, "new sapling")
 tree2 = Tree(10, ash, area0000, 2, 8, "established tree")
-tree3 = Tree(100, elm, area0200, 4, 5, "established tree")
-tree4 = Tree(140, hazel, area0200, 7, 1, "struck by lightning last year")
-tree5 = Tree(80, rowan, area0000, 1, 4, "established tree")
-tree6 = Tree(1, scots_pine, area0101, 6, 3, "new sapling")
-tree7 = Tree(1, scots_pine, area0101, 8, 1, "new sapling")
 
 tree_repository.save(tree1)
 tree_repository.save(tree2)
-tree_repository.save(tree3)
-tree_repository.save(tree4)
-tree_repository.save(tree5)
-tree_repository.save(tree6)
-tree_repository.save(tree7)
 
 pdb.set_trace()
