@@ -1,5 +1,5 @@
 # Forestly
-A forest management app
+A forest management app.
 
 ![A user-generated grid reference map with tree icons at tree locations](/static/forestly_map.png?raw=true "A user-generated forest map")
 
