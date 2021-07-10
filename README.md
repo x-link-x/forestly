@@ -13,10 +13,12 @@ A forest management app built using Python and Flask
 
 - Navigate to wherever you stored the forest directory in your command line.
 
-- $ createdb forest_manager
-- $ psql -d forest_manager -f db/forest_manager.sql
-- $ python3 console.py
-- $ q (to quit pdb)
+```
+createdb forest_manager
+psql -d forest_manager -f db/forest_manager.sql
+python3 console.py
+q (to quit pdb)
+```
 
 - $ flask run
 
