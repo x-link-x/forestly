@@ -18,9 +18,9 @@ createdb forest_manager
 psql -d forest_manager -f db/forest_manager.sql
 python3 console.py
 q (to quit pdb)
-```
 
-- $ flask run
+flask run
+```
 
 - Click on/copy the address where the app is running into your browser’s address bar
 
